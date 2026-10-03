@@ -1,6 +1,6 @@
 # CSS Frameworks - Beam
 
-![Beam feed page overview image](images/feed-view.png)
+![Beam feed page overview image](images/feed-view.jpg)
 
 ## Description
 
