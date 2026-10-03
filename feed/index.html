@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -49,17 +49,20 @@
     <main class="container mx-auto flex flex-col flex-1 gap-5 p-3">
       <section class="flex flex-col lg:flex-row gap-4">
         <div class="lg:w-3/4 bg-white shadow-md rounded-md p-3">
-          <form class="w-full flex flex-col gap-4">
+          <form id="post-form" class="w-full flex flex-col gap-4">
             <div class="flex flex-col gap-2">
               <h2 class="font-bold text-lg">Create new post</h2>
               <label for="title" class="font-bold">Title</label>
               <input type="text" id="title" class="border-solid border-black outline-none border-2 rounded-md p-2 focus:border-orange-700" placeholder="Post name" required />
               <label for="image" class="font-bold">Upload image</label>
-              <input type="file" id="image" class="border-solid border-black outline-none border-2 rounded-md p-2 focus:border-orange-700" required />
+              <input type="file" id="image" accept="image/*" class="border-solid border-black outline-none border-2 rounded-md p-2 focus:border-orange-700" required />
               <label for="description" class="font-bold">Description</label>
               <textarea id="description" class="border-solid border-black outline-none border-2 rounded-md p-2 focus:h-40 focus:border-orange-700" placeholder="Post description"></textarea>
             </div>
-            <button class="max-w-80 text-white font-bold py-2.5 px-5 rounded-md bg-gradient-to-r from-red-600 to-orange-500 transition duration-100 hover:from-red-700 hover:to-orange-600">
+            <p id="post-form-message" class="min-h-6 text-sm"></p>
+            <button
+              type="submit"
+              class="max-w-80 text-white font-bold py-2.5 px-5 rounded-md bg-gradient-to-r from-red-600 to-orange-500 transition duration-100 hover:from-red-700 hover:to-orange-600">
               Publish
             </button>
           </form>
@@ -69,7 +72,7 @@
             <h2 class="text-lg">Search</h2>
             <form class="flex flex-col gap-1">
               <label for="search" class="font-bold">Search for posts</label>
-              <input type="text" class="border-solid border-black outline-none border-2 rounded-md p-2 focus:border-orange-700" id="search" placeholder="Enter search word" required />
+              <input type="search" class="border-solid border-black outline-none border-2 rounded-md p-2 focus:border-orange-700" id="search" placeholder="Enter search word" />
             </form>
           </div>
           <div class="flex flex-col gap-5 bg-white shadow-md rounded-md p-3 h-fit">
@@ -92,7 +95,7 @@
       </section>
       <section class="flex flex-col gap-3">
         <h1 class="font-bold text-2xl">Posts</h1>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div id="posts" class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           <div class="overflow-hidden relative group hover:cursor-pointer rounded-lg h-64">
             <img class="absolute top-1 left-1 z-20 w-10 h-10 rounded-full" title="Brody Clayton" src="../images/profile-image.jpg" alt="Brody Clayton's profile picture" />
             <img src="../images/post1.jpg" alt="Blurry photo of sand" class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full" />
@@ -106,8 +109,7 @@
             <img
               src="../images/post2.jpg"
               alt="A tree with a mountain in the background"
-              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full"
-            />
+              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full" />
             <div class="bg-black bg-opacity-30 w-full h-full z-10 absolute top-0 left-0 justify-center items-center hidden group-hover:flex">
               <h2 class="text-white font-semibold">A mindfull place</h2>
             </div>
@@ -118,8 +120,7 @@
             <img
               src="../images/post3.jpg"
               alt="A little town at the foot of mountains"
-              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full"
-            />
+              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full" />
             <div class="bg-black bg-opacity-30 w-full h-full z-10 absolute top-0 left-0 justify-center items-center hidden group-hover:flex">
               <h2 class="text-white font-semibold">Visiting a new town</h2>
             </div>
@@ -130,8 +131,7 @@
             <img
               src="../images/post4.jpg"
               alt="Person standing at the side of a river"
-              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full"
-            />
+              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full" />
             <div class="bg-black bg-opacity-30 w-full h-full z-10 absolute top-0 left-0 justify-center items-center hidden group-hover:flex">
               <h2 class="text-white font-semibold">Waterstreams</h2>
             </div>
@@ -142,8 +142,7 @@
             <img
               src="../images/post5.jpg"
               alt="Decorated tables in dining hall"
-              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full"
-            />
+              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full" />
             <div class="bg-black bg-opacity-30 w-full h-full z-10 absolute top-0 left-0 justify-center items-center hidden group-hover:flex">
               <h2 class="text-white font-semibold">Dinner for seven</h2>
             </div>
@@ -154,14 +153,14 @@
             <img
               src="../images/post6.jpg"
               alt="Water in front of mountains"
-              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full"
-            />
+              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full" />
             <div class="bg-black bg-opacity-30 w-full h-full z-10 absolute top-0 left-0 justify-center items-center hidden group-hover:flex">
               <h2 class="text-white font-semibold">An escape to the wild</h2>
             </div>
             <h2 class="text-black font-semibold">An escape to the wild</h2>
           </div>
         </div>
+        <p id="empty-posts" class="hidden rounded-md bg-white p-6 text-center text-gray-600"></p>
       </section>
     </main>
     <footer class="text-center p-2 h-12">&copy; 2024 Beam</footer>
