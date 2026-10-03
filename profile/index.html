@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Beam</title>
+    <meta name="description" content="See the user's profile page." />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <script src="../js/app.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/39adc5ba14.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-gray-100 flex flex-col min-h-screen">
+    <header class="bg-white text-black shadow-md">
+      <nav class="container mx-auto py-2 px-3">
+        <div class="flex justify-between">
+          <a href="../feed/" class="flex items-center py-4 px-2">
+            <img src="../images/logo.png" alt="Beam logo with slogan" class="w-48" />
+          </a>
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="../feed" class="py-4 px-2 font-semibold hover:text-orange-700 hover:border-b-2 hover:border-b-orange-700 transition duration-300">Feed</a>
+            <a href="../profile" class="py-4 px-2 font-semibold border-b-2 text-orange-700 border-b-orange-700">Profile</a>
+            <a href="/" class="py-4 px-2 font-semibold hover:text-orange-700 hover:border-b-2 hover:border-b-orange-700 transition duration-300">Sign out</a>
+          </div>
+          <div class="flex md:hidden item-center">
+            <button id="menu-button">
+              <span class="hidden">Toggle menu</span>
+              <svg class="w-6 h-6 text-gray-500 hover:text-orange-700" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="hidden" id="mobile-menu">
+          <ul>
+            <li>
+              <a href="../feed" class="block text-sm py-4 px-2 hover:bg-orange-700 hover:text-white transition duration-300">Feed</a>
+            </li>
+            <li>
+              <a href="../profile" class="block text-sm py-4 px-2 bg-orange-700 text-white font-semibold">Profile</a>
+            </li>
+            <li>
+              <a href="/" class="block text-sm py-4 px-2 hover:bg-orange-700 hover:text-white transition duration-300">Sign Out</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto flex flex-col md:flex-row flex-1 gap-4 p-3">
+      <section class="flex flex-col gap-4 md:w-4/6 lg:w-3/4">
+        <div class="w-full flex flex-col gap-6 bg-white shadow-md rounded-md p-3">
+          <div class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12">
+            <div class="flex-1">
+              <div class="flex justify-center items-center w-32 h-32 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full border-orange-500 border-solid border-4 mx-auto">
+                <img class="rounded-full w-28 md:w-32 lg:w-40 h-28 md:h-32 lg:h-40 object-cover" src="../images/profile-image.jpg" alt="Profile picture" />
+              </div>
+            </div>
+            <div class="flex flex-col gap-7">
+              <div class="flex flex-col gap-2">
+                <h1 class="font-bold md:text-xl mx-auto md:mx-0">Brody Clayton</h1>
+                <p class="lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eros risus, tempor eget nunc et, sagittis venenatis sapien.</p>
+              </div>
+              <div class="flex justify-around text-lg lg:text-xl">
+                <div class="flex flex-col items-center">
+                  <span>4</span>
+                  <span>posts</span>
+                </div>
+                <div class="flex justify-around">
+                  <div class="flex flex-col items-center">
+                    <span>7</span>
+                    <span>followers</span>
+                  </div>
+                </div>
+                <div class="flex justify-around">
+                  <div class="flex flex-col items-center">
+                    <span>3</span>
+                    <span>following</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-5 justify-between">
+            <button class="flex-1 max-w-80 text-white font-bold p-2.5 rounded-full bg-gradient-to-r from-red-600 to-orange-500 transition duration-100 hover:from-red-700 hover:to-orange-600">
+              Follow
+            </button>
+            <a href="#" class="w-11 bg-gray-200 rounded-md flex justify-center items-center hover:cursor-pointer hover:bg-gray-300 transition duration-300">
+              <span class="hidden">Send message</span>
+              <i class="fa-regular fa-paper-plane"></i>
+            </a>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div class="overflow-hidden relative group hover:cursor-pointer rounded-lg h-64">
+            <img src="../images/post1.jpg" alt="Blurry photo of sand" class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full" />
+            <div class="bg-black bg-opacity-30 w-full h-full z-10 absolute top-0 left-0 justify-center items-center hidden group-hover:flex">
+              <h2 class="text-white font-semibold">Travel to the dunes</h2>
+            </div>
+            <h2 class="text-black font-semibold">Travel to the dunes</h2>
+          </div>
+          <div class="overflow-hidden relative group hover:cursor-pointer rounded-lg h-64">
+            <img
+              src="../images/post2.jpg"
+              alt="A tree with a mountain in the background"
+              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full"
+            />
+            <div class="bg-black bg-opacity-30 w-full h-full z-10 absolute top-0 left-0 justify-center items-center hidden group-hover:flex">
+              <h2 class="text-white font-semibold">A mindfull place</h2>
+            </div>
+            <h2 class="text-black font-semibold">A mindfull place</h2>
+          </div>
+          <div class="overflow-hidden relative group hover:cursor-pointer rounded-lg h-64">
+            <img
+              src="../images/post3.jpg"
+              alt="A little town at the foot of mountains"
+              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full"
+            />
+            <div class="bg-black bg-opacity-30 w-full h-full z-10 absolute top-0 left-0 justify-center items-center hidden group-hover:flex">
+              <h2 class="text-white font-semibold">Visiting a new town</h2>
+            </div>
+            <h2 class="text-black font-semibold">Visiting a new town</h2>
+          </div>
+          <div class="overflow-hidden relative group hover:cursor-pointer rounded-lg h-64">
+            <img
+              src="../images/post4.jpg"
+              alt="Person standing at the side of a river"
+              class="rounded-lg shadow-md object-cover group-hover:scale-125 transition-all duration-300 w-full h-52 group-hover:h-full"
+            />
+            <div class="bg-black bg-opacity-30 w-full h-full z-10 absolute top-0 left-0 justify-center items-center hidden group-hover:flex">
+              <h2 class="text-white font-semibold">Waterstreams</h2>
+            </div>
+            <h2 class="text-black font-semibold">Waterstreams</h2>
+          </div>
+        </div>
+      </section>
+      <section class="md:w-2/6 lg:w-1/4">
+        <div class="flex flex-col gap-5 w-full bg-white shadow-md rounded-md p-3 max-h-screen overflow-auto">
+          <div class="flex justify-around gap-2 text-lg">
+            <h2 id="followers-select" class="underline hover:cursor-pointer hover:underline">Followers</h2>
+            <h2 id="following-select" class="hover:cursor-pointer hover:underline">Following</h2>
+          </div>
+          <div id="followers" class="flex flex-col gap-3">
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Annalise Ibarra's profile picture" />
+              <span>Annalise Ibarra</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Alaina Gibson's profile picture" />
+              <span>Alaina Gibson</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Jayson Evans's profile picture" />
+              <span>Jayson Evans</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Jamir Patton's profile picture" />
+              <span>Jamir Patton</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Logan Vazquez's profile picture" />
+              <span>Logan Vazquez</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Matthew Harper's profile picture" />
+              <span>Matthew Harper</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Aaron Deleon's profile picture" />
+              <span>Aaron Deleon</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Jamie Shannon's profile picture" />
+              <span>Jamie Shannon</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Kendall Case's profile picture" />
+              <span>Kendall Case</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Nikolas Bass's profile picture" />
+              <span>Nikolas Bass</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Sean Ware's profile picture" />
+              <span>Sean Ware</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Danna Lawson's profile picture" />
+              <span>Danna Lawson</span>
+            </div>
+          </div>
+          <div id="following" class="hidden flex-col gap-3">
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Liana Cobb's profile picture" />
+              <span>Liana Cobb</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Chris Carpenter's profile picture" />
+              <span>Chris Carpenter</span>
+            </div>
+            <div class="flex items-center gap-5 rounded-md p-2 hover:bg-gray-200 hover:cursor-pointer">
+              <img class="w-10 h-10 rounded-full" src="../images/profile-image.jpg" alt="Lennon Bernard's profile picture" />
+              <span>Lennon Bernard</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="text-center p-2 h-12">&copy; 2024 Beam</footer>
+  </body>
+</html>
